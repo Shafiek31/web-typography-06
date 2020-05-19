@@ -1,0 +1,664 @@
+/* **********************************************
+Basic mechanics
+Hide all paragraphs by default
+Show them when they receive the class 'on'
+Hide them when they receive the class 'off'
+Feel free to adjust the defaults to your needs.
+********************************************** */
+
+/*.cirkel {
+    display: flex;
+  margin-left: auto;
+  margin-right: auto;
+    width: 100px;
+    position: absolute;
+        filter: blur(5px);
+        animation: color 77s;
+
+}
+
+@keyframes color {
+    0% {
+       fill: black
+    }
+
+    10% {
+       fill: darkred;
+    }
+
+    20% {
+       fill: black
+    }
+
+    30% {
+       fill: darkred;
+    }
+
+    40% {
+       fill: black
+    }
+
+    50% {
+       fill: darkred;
+    }
+
+    100% {
+        column-fill: black;
+    }
+}*/
+
+.html5-video-player .video-stream {
+    width: 100%;
+    color: red;
+}
+
+
+#video-placeholder {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    height: 500px;
+    margin-top: 10em;
+}
+
+#closed-captions p {
+    opacity: 0;
+    transition: .05s;
+    position: absolute;
+}
+
+#closed-captions .on {
+    opacity: 1;
+}
+
+#closed-captions .off {
+    transition: .2s;
+    opacity: 0;
+}
+
+.voice4,
+.voice3 {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-align: right;
+    right: 30%;
+}
+
+.voice1 {
+    font-family: "Brenner Mono regular";
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-align: right;
+    right: 30%;
+    letter-spacing: -1.5px;
+    position: absolute;
+    margin-top: -10em;
+}
+
+.voice2 {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    margin-right: 20px;
+    left: 35%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 0.2em;
+    position: absolute;
+    margin-top: -10em;
+
+
+}
+
+.sound0,
+.sound1 {
+    animation: color01 5s infinite, scaleintro 10s infinite;
+}
+
+@keyframes color01 {
+    0% {
+        background-color: black
+    }
+
+    50% {
+        background-color: #283336;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes scaleintro {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    25% {
+        transform: scale(1.05, 1.05);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    75% {
+        transform: scale(1.05, 1.05);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.sound2 {
+    animation: /*spin 0.2s,*/scaleintro 5s infinite;
+}
+
+/*
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}*/
+
+.sound3,
+.sound4,
+sound5 {
+    animation: zoomout 5s forwards;
+}
+
+@keyframes zoomout {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    80% {
+        transform: scale(1.9, 1.9);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.sound6 {
+    animation: color02 2s infinite;
+}
+
+@keyframes color02 {
+    0% {
+        background-color: black
+    }
+
+    50% {
+        background-color: #333832;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+
+/*
+.sound4 {
+    width: 100%;
+    animation: color 1s infinite;
+}
+
+@keyframes color {
+    0% {
+        background-color: black
+    }
+
+    50% {
+        background-color: darkred;
+    }
+
+    100% {
+        background-color: black;
+    }
+}*/
+
+/*.sound1 {
+    animation: color 1s infinite;
+}
+
+@keyframes color {
+    0% {
+        background-color: black
+    }
+
+    50% {
+        background-color: darkred;
+    }
+
+    100% {
+        background-color: black;
+    }
+}*/
+
+.sound9 {
+    animation: zoominoutsinglefeatured 50s forwards;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    90% {
+        transform: scale(1.4, 1.4);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.sound8 {
+    animation: color 1.5s infinite, scale 50s forwards;
+}
+
+@keyframes color {
+    0% {
+        background-color: black
+    }
+
+    50% {
+        background-color: #939B8A;
+    }
+
+    100% {
+        background-color: black;
+    }
+}
+
+.sound10 {
+    color: red;
+    padding:
+    animation: zoominoutsinglefeatured 50s forwards;
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    95% {
+        transform: scale(1.3, 1.3);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+html {
+    background-color: black;
+}
+
+body {
+    font-family: "brenner";
+}
+
+/* **********************************************
+The first paragraph, with extended timing for
+    all siblings. Basically what it does is that
+    it shows the text after a delay, which
+    corresponds with the time that the word is
+    spoken.
+You probably want to change the styling.
+********************************************** */
+.p0.on span {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+}
+
+/*
+.p0.on span:first-of-type {
+    font-family: "Brenner Mono Bold";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1em;
+    opacity: 1;
+    transition: 0s;
+}
+
+.p0.on span:nth-of-type(2) {
+    font-family: "Brenner Mono Bold";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.5em;
+    opacity: 1;
+    transition: 0s .4s;
+    margin-right: -.25em;
+    font-weight: 400;
+    color: #395933;
+}
+
+.p0.on span:nth-of-type(3) {
+    font-family: "Brenner Mono Bold";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.5em;
+    opacity: 1;
+    transition: 0s .4s;
+    margin-right: -.25em;
+    font-weight: 400;
+    color: #395933;
+}
+
+.p0.on span:nth-of-type(4) {
+    font-family: "Brenner Mono Bold";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.5em;
+    opacity: 1;
+    transition: 0s .4s;
+    margin-right: -.25em;
+    font-weight: 400;
+    color: #395933;
+}
+
+.p0.on span:nth-of-type(5) {
+    font-family: "Brenner Mono Bold";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.5em;
+    opacity: 1;
+    transition: 0s .4s;
+    margin-right: -.25em;
+    font-weight: 400;
+    color: #395933;
+}
+
+.p0.on span:nth-of-type(6) {
+    font-family: "Brenner Mono Bold";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.5em;
+    opacity: 1;
+    transition: 0s .4s;
+    margin-right: -.25em;
+    font-weight: 400;
+    color: #395933;
+}
+
+.p0.on span:nth-of-type(7) {
+    font-family: "Brenner Mono Bold";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.5em;
+    opacity: 1;
+    transition: 0s .4s;
+    margin-right: -.25em;
+    font-weight: 400;
+    color: #395933;
+}
+
+.p0.on span:nth-of-type(8) {
+    font-family: "Brenner Mono Bold";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 1.5em;
+    opacity: 1;
+    transition: 0s .4s;
+    margin-right: -.25em;
+    font-weight: 400;
+    color: #395933;
+}
+
+.p0.on span:nth-of-type(9) {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    opacity: 1;
+    transition: 0s 3s;
+}
+
+.p0.on span:nth-of-type(10) {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    opacity: 1;
+    transition: 0s 3.2s;
+}
+*/
+
+.p0.on span:nth-of-type(11) {
+    color: red;
+}
+
+/*Hieronder staat p1 */
+.p1 span {
+    opacity: 0;
+    font-family: brenner;
+}
+
+.p1.on span:first-of-type {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    opacity: 1;
+    transition: 0s;
+    color: white;
+}
+
+
+.p1.on span:nth-of-type(2) {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    opacity: 1;
+    transition: 0s .4s;
+    font-weight: 400;
+}
+
+.p2 span {
+    font-family: "Brenner Mono Regular";
+    font-style: normal;
+    font-weight: 400;
+    animation-duration:
+}
+
+.p2.on span:first-of-type {
+    font-size: 1em;
+    opacity: 1;
+    transition: 0s;
+}
+
+
+.p2.on span:nth-of-type(2) {
+    font-size: 1em;
+    opacity: 1;
+    transition: 0s .4s;
+    color: red;
+}
+
+.p2.on span:nth-of-type(2) {
+    font-size: 1em;
+    opacity: 1;
+    transition: 0s .4s;
+}
+
+/*.p3.on span:nth-of-type(2) {
+    font-family: "Brenner Mono Bold";
+font-style: Italic;
+font-weight: 800;
+    color: red;*/
+
+}
+
+.p4.on span {
+   text-align: center;
+}
+
+/*.p4.on span:nth-of-type(2)  {
+    font-family: "Brenner Mono";
+font-style: Normal;
+    padding: 0.4em;
+    color: red;
+}*/
+.p4.on span:nth-of-type(1) {
+    margin-left: 5em;
+}
+
+
+.p4.on span:nth-of-type(4),
+.p4.on span:nth-of-type(7) {
+    color: red;
+}
+
+/*interlinked within cells, interlinked within on stem*/
+
+.p5.on span:nth-of-type(3),
+.p5.on span:nth-of-type(6),
+.p5.on span:nth-of-type(7) {
+    color: red;
+}
+
+.p5.on span:nth-of-type(1),
+.p5.on span:nth-of-type(4) {
+    font-family: "Brenner Mono";
+    font-style: Normal;
+    font-weight: 800;
+    color: white;
+}
+
+/*Fuck off*/
+.p6.on span:nth-of-type(1),
+.p6.on span:nth-of-type(2) {
+    color: red;
+    font-size: 1em;
+    text-transform: uppercase;
+    position:relative;
+   top: -10em;
+}
+
+
+/*And dreadfully*/
+.p6.on span:nth-of-type(3) {
+    font-family: "Brenner Mono";
+    font-style: Normal;
+    font-weight: 800;
+    color: red;
+    font-size: 1em;
+    position:relative;
+   top: -10em;
+}
+
+/*.p7.on span:nth-of-type(5), .p7.on span:nth-of-type(6)  {
+    font-family: "Brenner Mono";
+font-style: Normal;
+font-weight: 800;
+    background-color: black;
+    padding: 0.4em;
+    font-size: 1.5;
+}*/
+
+.p7.on span:nth-of-type(9) {
+    font-weight: 800;
+    color: white;
+}
+
+/*Somone*/
+.p21.on span:nth-of-type(9) {
+    color: deeppink;
+}
+
+/*Love*/
+.p21.on span:nth-of-type(11) {
+    color: red;
+}
+
+/*feel*/
+.p24.on span:nth-of-type(7) {
+    color: red;
+}
+
+/*finger-01*/
+.p24.on span:nth-of-type(8) {
+    color: red;
+}
+
+/*finger-02*/
+.p24.on span:nth-of-type(10) {
+    color: red;
+}
+
+/*heart*/
+.p27.on span:nth-of-type(7) {
+    color: red;
+    animation: pluse 1s infinite;
+}
+
+@keyframes pluse {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: pink;
+    }
+}
+
+
+
+/*dream
+.p30.on span:nth-of-type(3) {
+    animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    color: white;
+  }
+  100% {
+    color: skyblue;
+  }
+}
+
+dream
+.p35.on span:nth-of-type(11) {
+    letter-spacing: 5px;
+}*/
+
+
+.p41.on {
+    transition: 0.2;
+    color: #A54747;
+    opacity: 50%;
+}
+
+.p42.on {
+    color: #D11919;
+    opacity: 75%;
+}
+
+.p43.on {
+    color: red;
+}
+
+/*Done*/
+.p44.on span:nth-of-type(2) {
+    color: greenyellow;
+}
